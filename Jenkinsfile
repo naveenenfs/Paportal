@@ -1,13 +1,21 @@
 pipeline {
     agent any
+
     stages {
-	
-        stage('Hello') {
+        stage('Build') {
             steps {
-				//ws('C:/WorkingSolutions/PAPortal_Test'){
-					echo 'Trunk'
-				//}
-			}
-		}
-	}
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
 }
